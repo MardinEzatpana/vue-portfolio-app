@@ -1,28 +1,13 @@
 <script setup>
-import { Head, Link } from '@inertiajs/vue3';
+import Frontend from '@/Layouts/Frontend.vue';
+import { Head } from '@inertiajs/vue3';
 
-defineProps({
-    canLogin: {
-        type: Boolean,
-    },
-    canRegister: {
-        type: Boolean,
-    },
-    laravelVersion: {
-        type: String,
-        required: true,
-    },
-    phpVersion: {
-        type: String,
-        required: true,
-    },
-});
 </script>
 
 <template>
     <Head title="Home" />
 
-    <h1>hi mardin</h1>
+    <Frontend/>
 </template>
 
 <style>
