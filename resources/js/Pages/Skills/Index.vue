@@ -9,7 +9,7 @@
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="flex justify-end m-2 p-2">
           <Link
-            href="#"
+          href="/skills/create"
             class="
               px-4
               py-2
@@ -43,6 +43,8 @@
             </thead>
             <tbody>
               <tr
+              v-for="skill in skills.data"
+                :key="skill.id"
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
               >
                 <th
@@ -56,20 +58,20 @@
                     dark:text-white
                   "
                 >
-                 1
+                {{ skill.id }}
                 </th>
-                <td class="py-4 px-6">vue3</td>
+                <td class="py-4 px-6">{{ skill.name }}</td>
                 <td class="py-4 px-6">
-                  <img src="../../../../public/img/pexels-karolina-grabowska-8092507.jpg" class="w-12 h-12 rounded-full" />
+                <img :src="skill.image" class="w-12 h-12 rounded-full" />
                 </td>
                 <td class="py-4 px-6">
                   <Link
-                  href="#"
+                  :href="route('projects.edit', skill.id)"
                     class="font-medium text-blue-500 hover:text-blue-700 mr-2"
                     >Edit</Link
                   >
                   <Link
-                  href="#"
+                  :href="route('projects.destroy', skill.id)"
                     method="delete"
                     as="button"
                     type="button"
@@ -90,5 +92,8 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import { Head, Link } from "@inertiajs/vue3";
 
+defineProps({
+  skills: Object,
+});
 
 </script>

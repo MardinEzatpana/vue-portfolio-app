@@ -24,9 +24,11 @@ const navigations = [
       bis_skin_checked="1"
     >
       <a href="#" class="flex items-center">
-        <ApplicationLogo
-                                        class="block h-9 w-auto fill-current text-gray-800"
-                                    />
+        <img
+          src="../../../../public/img/logo.jpg"
+          class="mr-3 h-6 sm:h-9 rounded-lg"
+          alt="mardin Logo"
+        />
         <span
           class="
             self-center
@@ -35,7 +37,7 @@ const navigations = [
             whitespace-nowrap
             dark:text-white
           "
-          >mardin</span
+          >Mardin</span
         >
       </a>
       <button
@@ -86,7 +88,7 @@ const navigations = [
             rounded-lg
             border border-light-tail-500
             dark:border-dark-navy-100
-            md:flex-row md:space-x-8 md:mt-0 md:font-medium md:border-0
+            md:flex-row md:space-x-3 md:mt-0 md:font-medium md:border-0
           "
         >
           <li v-for="(navigation, index) in navigations" :key="index">
