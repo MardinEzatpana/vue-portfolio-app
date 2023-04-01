@@ -1,7 +1,8 @@
 <script setup>
-import ApplicationLogo from '@/Components/ApplicationLogo.vue';
-import { ref } from "vue";
+
+import { ref, onMounted } from "vue";
 const showMobileMenu = ref("false");
+const scrollBg = ref(false);
 
 const navigations = [
   { name: "Home", href: "#home" },
@@ -12,12 +13,24 @@ const navigations = [
   { name: "Dashboard", href: "dashboard" },
 ];
 
+const setScrollBg = (value) => {
+  scrollBg.value = value;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", () => {
+    return window.scrollY > 50 ? setScrollBg(true) : setScrollBg(false);
+  });
+});
 
 </script>
 <template>
   <nav
-    class="w-full fixed z-20 border-gray-200 px-2 sm:px-4 py-2.5 rounded bg-light-primary dark:bg-dark-primary"
-
+    class="w-full fixed z-20 border-gray-200 px-2 sm:px-4 py-2.5 rounded"
+    :class="{
+      'bg-light-primary dark:bg-dark-primary': scrollBg,
+      'bg-white dark:bg-slate-800': !scrollBg,
+    }"
   >
     <div
       class="container flex flex-wrap justify-between items-center mx-auto"
@@ -25,7 +38,7 @@ const navigations = [
     >
       <a href="#" class="flex items-center">
         <img
-          src="../../../../public/img/logo.jpg"
+          src="http://127.0.0.1:8000/img/logo.jpg"
           class="mr-3 h-6 sm:h-9 rounded-lg"
           alt="mardin Logo"
         />

@@ -5,7 +5,7 @@ import Header from "@/Components/Frontend/Header.vue";
   <div class="bg-slate-200 dark:bg-slate-900">
     <!-- Header -->
     <Header />
-    <main class="min-h-screen">
+    <main >
       <slot />
     </main>
     <!-- Footer -->
