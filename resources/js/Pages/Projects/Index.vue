@@ -1,5 +1,5 @@
 <template>
-    <Head title="Skills Index" />
+    <Head title="Projects" />
     <AuthenticatedLayout>
       <template #header>
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">Projects</h2>
@@ -77,7 +77,7 @@
                       method="delete"
                       as="button"
                       type="button"
-                      class="font-medium text-red-500 hover:text-red-700 mr-2"
+                      class="font-medium text-red-600 hover:text-red-800 mr-2"
                       >Delete</Link
                     >
                   </td>
