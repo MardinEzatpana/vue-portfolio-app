@@ -28,7 +28,7 @@
     >
       <div class="flex flex-col md:flex-row items-center h-full pt-8">
         <div class="flex-1 flex flex-col items-center lg:items-start">
-          <p class="text-lg text-accent text-md mb-[22px] mt-20">Hey, I'm Mardin! 👋</p>
+          <p class="text-lg text-accent text-md mb-[22px] md:mt-20">Hey, I'm Mardin! 👋</p>
           <h1
             class="
               text-4xl

@@ -42,9 +42,9 @@
               cupiditate ratione esse maxime eum recusandae ducimus.
             </p>
           </div>
-          <a href="#contact" class="btn btn-md bg-accent text-light-tail-100">
+          <button class="btn btn-md bg-accent text-light-tail-100">
             Contact me
-          </a>
+          </button>
         </div>
       </div>
     </div>
