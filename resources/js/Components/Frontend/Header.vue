@@ -39,7 +39,7 @@ onMounted(() => {
       <a href="#" class="flex items-center">
         <img
           src="http://127.0.0.1:8000/img/logo.jpg"
-          class="mr-3 h-6 sm:h-9 rounded-lg"
+          class="mr-3 h-6 sm:h-9 rounded-full"
           alt="mardin Logo"
         />
         <span

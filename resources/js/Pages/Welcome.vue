@@ -7,6 +7,8 @@ import Promote from "@/Components/Frontend/Promote.vue";
 import About from "@/Components/Frontend/About.vue";
 import Skills from "@/Components/Frontend/Skills.vue";
 import Portfolio from '@/Components/Frontend/Portfolio.vue';
+import Services from '@/Components/Frontend/Services.vue';
+import ContactMe from "../Components/Frontend/ContactMe.vue";
 
 
 defineProps({
@@ -18,17 +20,15 @@ defineProps({
 
 <template>
     <Head title="Home" />
-    <Frontend/>
-    <!-- Hero primary -->
+    <Frontend>
     <Hero />
-    <!-- Promote tail-100 -->
     <Promote />
-    <!-- About secondary -->
     <About />
-    <!-- Skills tail-100 -->
     <Skills :skills="skills" />
-    <!-- Portfolio primary -->
     <Portfolio :skills="skills" :projects="projects" />
+    <Services />
+    <ContactMe />
+    </Frontend>
 </template>
 
 <style>
