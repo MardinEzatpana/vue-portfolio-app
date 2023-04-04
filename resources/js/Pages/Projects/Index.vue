@@ -35,7 +35,6 @@
                 "
               >
                 <tr>
-                  <th scope="col" class="py-3 px-6">ID</th>
                   <th scope="col" class="py-3 px-6">Name</th>
                   <th scope="col" class="py-3 px-6">Skill</th>
                   <th scope="col" class="py-3 px-6">Image</th>
@@ -48,19 +47,6 @@
                 :key="project.id"
                   class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
                 >
-                  <th
-                    scope="row"
-                    class="
-                      py-4
-                      px-6
-                      font-medium
-                      text-gray-900
-                      whitespace-nowrap
-                      dark:text-white
-                    "
-                  >
-                  {{ project.id }}
-                  </th>
                   <td class="py-4 px-6">{{ project.name }}</td>
                   <td class="py-4 px-6">{{ project.skill.name }}</td>
                   <td class="py-4 px-6">
